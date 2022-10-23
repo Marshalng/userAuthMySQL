@@ -36,6 +36,9 @@ function loginUser($email, $password){
         $result = $query->fetch_assoc();
         $_SESSION['username'] = $result['full_names'];
         header('Location: /userAuthMySQL/dashboard.php');
+    }else {
+
+        header('Location: /userAuthMySQL/forms/login.html');
     }
 }
 
